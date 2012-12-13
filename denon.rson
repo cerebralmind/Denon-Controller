@@ -1,0 +1,26 @@
+power
+    cmd = PW
+    arg
+        on
+            action = verified_cmd
+            raw_arg = ON
+        off
+            action = verified_cmd
+            raw_arg = STANDBY
+        status
+            action = query
+
+volume
+    cmd = MV
+    arg
+        up
+            action = cmd_with_status
+            raw_arg = UP
+        down
+            action = cmd_with_status
+            raw_arg = UP
+        '*'
+            action = cmd_with_status
+            raw_arg = ''
+        status
+            action = query
